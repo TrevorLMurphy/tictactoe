@@ -4,19 +4,20 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.File;
 
 
-public class Game extends JPanel {
+class Game extends JPanel {
 
     private static byte playerCount = 0;
-    private final ImageIcon X = new ImageIcon("/Users/trevor/Dropbox/code/IdeaProjects/TicTacToe/images/X.png");
-    private final ImageIcon O = new ImageIcon("/Users/trevor//Dropbox/code/IdeaProjects/TicTacToe/images/O.png");
+    private final ImageIcon X = new ImageIcon(new File(".").getAbsolutePath().concat("/images/X.png"));
+    private final ImageIcon O = new ImageIcon(new File(".").getAbsolutePath().concat("/images/O.png"));
 
     private final JButton[] buttons = new JButton[9];
-    CardLayout switcher;
-    JPanel switcherPanel;
+    private CardLayout switcher;
+    private JPanel switcherPanel;
 
-    public Game(CardLayout switcher, JPanel switcherPanel) {
+    Game(CardLayout switcher, JPanel switcherPanel) {
         this.switcher = switcher;
         this.switcherPanel = switcherPanel;
         init();

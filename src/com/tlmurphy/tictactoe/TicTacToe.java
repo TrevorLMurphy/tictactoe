@@ -2,7 +2,6 @@ package com.tlmurphy.tictactoe;
 
 import javax.swing.*;
 import java.awt.*;
-import java.io.File;
 
 /**
  * Basic Tic-Tac-Toe game created by Trevor L. Murphy
@@ -35,7 +34,6 @@ public class TicTacToe extends JFrame {
 
 
     public static void main(String[] args) {
-        System.out.println(File(".").getAbsolutePath());
-        //new TicTacToe();
+        new TicTacToe();
     }
 }

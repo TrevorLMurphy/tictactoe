@@ -6,17 +6,17 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 
-public class Menu extends JPanel {
+class Menu extends JPanel {
 
     //private final JButton singleButton = new JButton("Single Player");
     private final JButton playButton = new JButton("Play");
     private final JButton helpButton = new JButton("Help");
     private final JButton quitButton = new JButton("Quit");
 
-    CardLayout switcher;
-    JPanel switcherPanel;
+    private CardLayout switcher;
+    private JPanel switcherPanel;
 
-    public Menu(CardLayout switcher, JPanel switcherPanel) {
+    Menu(CardLayout switcher, JPanel switcherPanel) {
         init();
         this.switcher = switcher;
         this.switcherPanel = switcherPanel;
